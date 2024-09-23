@@ -3,8 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
@@ -13,6 +11,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./style.css" />
     <title>vales portal</title>
   </head>
@@ -140,6 +139,254 @@
           </div>
         </div>
       </section>
+
+      <!-- <<========== MAIN CONTENT ==========>> -->
+      <div class="content container">
+        <div class="content__left">
+          <!-- <<========== NEWS SECTION ==========>> -->
+          <section class="news">
+            <h2 class="section__title">НОВОСТИ</h2>
+            <div class="news__content flex">
+              <div class="news__content-left">
+                <div class="news__content-left-img">
+                  <img src="./assets/news-1.jpg" alt="news-image" />
+                </div>
+                <div class="news__content-left-desc">
+                  <div class="news__content-left-title">
+                    Новости культуры России и всего мира
+                  </div>
+                  <p class="news__content-left-text">
+                    В минувшие выходные в Москве на фестивале «Оберег» вручили
+                    первую премию Russian World Music Awards
+                  </p>
+                </div>
+              </div>
+              <div class="news__content-right flex">
+                <div class="news__content-right-card flex">
+                  <div class="card__img">
+                    <img src="./assets/news-2.jpg" alt="news-image" />
+                    <div class="news__overlay">
+                      <svg
+                        width="14"
+                        height="18"
+                        viewBox="0 0 14 18"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1 1H13V16L7 11.1351L1 16V1Z"
+                          stroke="#FF7931"
+                          stroke-width="1.5"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="news__content-right-desc">
+                    <h3 class="desc__title">
+                      Открытие нового памятника Евгению Леонову
+                    </h3>
+                    <p class="desc__text">
+                      10 сентября в 15:00 был открыт памятник писателю
+                    </p>
+                  </div>
+                </div>
+                <div class="news__content-right-card flex">
+                  <div class="card__img">
+                    <img src="./assets/news-3.jpg" alt="news-image" />
+                    <div class="news__overlay">
+                      <svg
+                        width="14"
+                        height="18"
+                        viewBox="0 0 14 18"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1 1H13V16L7 11.1351L1 16V1Z"
+                          stroke="#FF7931"
+                          stroke-width="1.5"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="news__content-right-desc">
+                    <h3 class="desc__title">Беседы с писателями</h3>
+                    <p class="desc__text">
+                      Русские писатели говорят о важности искусства
+                    </p>
+                  </div>
+                </div>
+                <div class="news__content-right-card flex">
+                  <div class="card__img">
+                    <img src="./assets/news-4.jpg" alt="news-image" />
+                    <div class="news__overlay">
+                      <svg
+                        width="14"
+                        height="18"
+                        viewBox="0 0 14 18"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1 1H13V16L7 11.1351L1 16V1Z"
+                          stroke="#FF7931"
+                          stroke-width="1.5"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="news__content-right-desc">
+                    <h3 class="desc__title">
+                      День и ночь св. Патрика: встреча старых друзей
+                    </h3>
+                    <p class="desc__text">Не Джойсом единым живет Ирландия!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- <<========== REVIEWS SECTION ==========>> -->
+          <section class="reviews">
+            <h2 class="section__title">ОБЗОРЫ</h2>
+
+            <div id="pagination-cards" class="pagination__cards"></div>
+            <div id="pagination-controls" class="pagination__controls flex">
+              <button class="pagination__btn prev" onclick="prevPage()">
+                <svg
+                  width="30"
+                  height="28"
+                  viewBox="0 0 30 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g opacity="0.4">
+                    <path d="M29.5 0V27.5" stroke="black" />
+                    <path
+                      d="M0.707092 13.0033L5.88346 7.87465L5.86185 12.5379L5.8357 18.1796L0.707092 13.0033Z"
+                      fill="black"
+                      stroke="black"
+                    />
+                  </g>
+                </svg>
+              </button>
+              <ul class="pagination" id="pagination"></ul>
+              <button class="pagination__btn next" onclick="nextPage()">
+                <svg
+                  width="30"
+                  height="28"
+                  viewBox="0 0 30 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g opacity="0.4">
+                    <path d="M1 0V27.5" stroke="black" />
+                    <path
+                      d="M29.0121 13.0033L23.8357 7.87465L23.8573 12.5379L23.8835 18.1796L29.0121 13.0033Z"
+                      fill="black"
+                      stroke="black"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </section>
+          <!-- <<========== POSTER SECTION ==========>> -->
+          <div class="poster">
+            <img src="./assets/poster.jpg" alt="poster" />
+            <div class="poster__content">
+              <h2 class="poster__title">Ох, уж этот балет</h2>
+              <button class="btn">
+                смотреть
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M8 0L6.6 1.4L12.2 7H0V9H12.2L6.6 14.6L8 16L16 8L8 0Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <aside class="content__right">
+          <div class="aside__item aside__item-one">
+            <img src="./assets/aside-1.jpg" alt="item-1" />
+            <div class="aside__item-content">
+              <h3 class="aside__title">ВОЗДУШНЫЕ ШАРЫ</h3>
+              <button class="btn">
+                смотреть
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M8 0L6.6 1.4L12.2 7H0V9H12.2L6.6 14.6L8 16L16 8L8 0Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="aside__item">
+            <img src="./assets/aside-2.jpg" alt="item-1" />
+            <div class="aside__item-content">
+              <h3 class="aside__title">НЕОБЫЧНАЯ ФОТОСЕССИЯ</h3>
+              <button class="btn">
+                смотреть
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M8 0L6.6 1.4L12.2 7H0V9H12.2L6.6 14.6L8 16L16 8L8 0Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="aside__item">
+            <img src="./assets/aside-3.jpg" alt="item-1" />
+            <div class="aside__item-content">
+              <h3 class="aside__title">Выставка птиц</h3>
+              <button class="btn">
+                смотреть
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M8 0L6.6 1.4L12.2 7H0V9H12.2L6.6 14.6L8 16L16 8L8 0Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </aside>
+      </div>
     </main>
     <footer class="footer"></footer>
 
